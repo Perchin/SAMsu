@@ -1,0 +1,185 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="">
+    <title>Аналитика</title>
+    <link href="assets/styles.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/dashboard.css" rel="stylesheet">
+
+    <script src="assets/vue.min.js"></script>
+    <script src="assets/apexcharts.js"></script>
+    <script src="assets/vue-apexcharts.js"></script>
+    <script src="assets/jquery.min.js"></script>
+
+    
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(50674954, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="../watch/50674954" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+</head>
+<body>
+
+<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3">СамГТУ</a>
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Навигация">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="dropdown">
+        <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+            2023 год
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                   
+                        <li><a class="dropdown-item active" href="index-2.htm?year=2023">2023 год</a></li>
+                    </ul>
+    </div>
+    <span class="form-control-dark w-100"></span>
+    <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+            <span class="nav-link">Аналитика</span>
+        </li>
+    </ul>
+
+</header>
+
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <div class="position-sticky pt-3">
+                <ul class="nav flex-column">
+                              <li class="nav-item">
+                                <a class="nav-link " aria-current="page" href="index-3.htm?block=0&year=2023">
+                                  <span data-feather="home"></span>
+                                  Главная
+                                </a>
+                              </li>
+                                            <li class="nav-item">
+                            <a class="nav-link active" href="index-4.htm?block=1&year=2023">
+                                <span data-feather="bar-chart-2"></span>
+                                Свод по профилям                           </a>
+                        </li>
+                                            <li class="nav-item">
+                            <a class="nav-link " href="index-5.htm?block=2&year=2023">
+                                <span data-feather="bar-chart-2"></span>
+                                Свод по дисциплинам                              </a>
+                        </li>
+                             
+                                    </ul>
+            </div>
+        </nav>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            
+                
+	
+<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+	<h1 class="h3"> Свод по профилям   </h1>
+</div>
+
+
+<h5></h5>
+
+<h1>Сколько всего студентов прошли анкетирование</h1>
+<div id="my-pie-chart-container">
+ <div class="pie animate no-round" style="--p:75;--c:rgba(0,143,251,1);"> 75%</div>
+ <div id="legenda">
+ <h5>Всего студентов:</h5>
+ <h5>6241</h5>
+ <h5>Оценившие студенты:</h5>
+ <h5>2441</h5>
+</div>
+</div>
+
+
+
+
+<div>
+<div id="app">
+	<div id="chart"></div>
+</div>
+</div>
+</div>                
+                    </main>
+    </div>
+</div>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../npm/feather-icons%404.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>-->
+<script src="assets/dashboard.js"></script>
+
+<script>
+    var options = {
+        series: [
+        {"name":"Прошли","data":["358","26","63","45"]},
+        
+        {"name":"Не прошли","data":["83","2","28","8"]}],
+        chart: {
+            type: 'bar',
+            height: 200,
+            stacked: true,
+            stackType: '100%',
+        },
+        plotOptions: {
+            bar: {
+                horizontal: true,
+            },
+        },
+        stroke: {
+            width: 1,
+            colors: ['#fff']
+        },
+        title: {
+            text: ''
+        },
+        fill: {
+            opacity: 1
+        },
+        noData: {
+            text: 'Загрузка...'
+        },
+        legend: {
+            position: 'top',
+            horizontalAlign: 'center',
+            offsetX: 0
+        },
+        xaxis: {
+            categories: ["Автоматизация технологических процессов и производств","Автоматизация технологических процессов и производств в машиностроении","Автоматизация технологических процессов и производств в нефтяной и газовой промышленности","Автоматизация технологических процессов и производств в отраслях топливно-энергетического комплекса"],
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+
+    $( "#level" ).change(function() {
+        window.location.replace("?block=1&year=2023&level="+$("#level").val()+"&form="+$("#form").val()+"&question="+$("#question").val());
+    });
+    $( "#form" ).change(function() {
+        window.location.replace("?block=1&year=2023&level="+$("#level").val()+"&form="+$("#form").val()+"&question="+$("#question").val());
+    });
+    $( "#question" ).change(function() {
+        window.location.replace("?block=1&year=2023&level="+$("#level").val()+"&form="+$("#form").val()+"&question="+$("#question").val());
+    });
+</script>
+</body>
+</html>
